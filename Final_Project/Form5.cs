@@ -13,11 +13,12 @@ namespace Final_Project
 {
     public partial class Form5 : Form
     {
-        private string stringConnection = "data source=Jorengezzz\\THEPASHTER;" + "database=Activity6;User ID=sa;password=Salahtompo22";
+        private string stringConnection = "data source=Jorengezzz\\THEPASHTER;" + "database=Restaurant_K1;User ID=sa;password=Salahtompo22";
         private SqlConnection koneksi;
         public Form5()
         {
             InitializeComponent();
+            refreshform();
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -27,7 +28,13 @@ namespace Final_Project
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            koneksi.Open();
+            string query = "SELECT Id_koki, Nama, Alamat, No_telp, FROM dbo.Koki";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
 
         private void refreshform()
@@ -36,7 +43,7 @@ namespace Final_Project
             txtnama.Text = "";
             txtnotelp.Text = "";
             txtalamat.Text = "";
-            btnAdd.Enabled = false;
+            
             btnClear.Enabled = false;
             btnSave.Enabled = false;
             btnOpen.Enabled = false;
@@ -67,6 +74,9 @@ namespace Final_Project
             txtnama.Enabled = true;
             txtnotelp.Enabled = true;
             txtalamat.Enabled = true;
+            btnSave.Enabled = true;
+            btnOpen.Enabled = true;
+            btnClear.Enabled=true;
            
         }
 
@@ -94,7 +104,7 @@ namespace Final_Project
                 MessageBox.Show("Masukkan Alamat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             koneksi.Open();
-            string str = "INSERT INTO prodi (Id_koki, Nama, Alamat,No_telp) VALUES (@id_koki, @nama, @alamat, @notelp)";
+            string str = "INSERT INTO Koki (Id_koki, Nama, Alamat,No_telp) VALUES (@id_koki, @nama, @alamat, @notelp)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("@Id_koki", idkoki));
