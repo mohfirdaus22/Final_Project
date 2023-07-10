@@ -103,12 +103,12 @@ namespace Final_Project
             koneksi.Close();
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridView();
-
+            refreshform();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
+            refreshform();
         }
     }
 }
