@@ -41,12 +41,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtidsup = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(183, 311);
+            this.btnAdd.Location = new System.Drawing.Point(207, 378);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(82, 33);
             this.btnAdd.TabIndex = 0;
@@ -56,7 +59,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(328, 311);
+            this.btnSave.Location = new System.Drawing.Point(318, 378);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 33);
             this.btnSave.TabIndex = 1;
@@ -65,7 +68,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(458, 311);
+            this.btnClear.Location = new System.Drawing.Point(430, 378);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 33);
             this.btnClear.TabIndex = 2;
@@ -74,7 +77,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(569, 92);
+            this.btnBack.Location = new System.Drawing.Point(33, 63);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(81, 31);
             this.btnBack.TabIndex = 3;
@@ -94,35 +97,35 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtidsup, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(183, 69);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(207, 227);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(350, 202);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(298, 122);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // txtkotaasal
             // 
-            this.txtkotaasal.Location = new System.Drawing.Point(112, 151);
+            this.txtkotaasal.Location = new System.Drawing.Point(95, 88);
             this.txtkotaasal.Name = "txtkotaasal";
-            this.txtkotaasal.Size = new System.Drawing.Size(210, 22);
+            this.txtkotaasal.Size = new System.Drawing.Size(200, 22);
             this.txtkotaasal.TabIndex = 7;
             // 
             // txtnotlp
             // 
-            this.txtnotlp.Location = new System.Drawing.Point(112, 101);
+            this.txtnotlp.Location = new System.Drawing.Point(95, 59);
             this.txtnotlp.Name = "txtnotlp";
-            this.txtnotlp.Size = new System.Drawing.Size(210, 22);
+            this.txtnotlp.Size = new System.Drawing.Size(200, 22);
             this.txtnotlp.TabIndex = 6;
             // 
             // txtnama
             // 
-            this.txtnama.Location = new System.Drawing.Point(112, 52);
+            this.txtnama.Location = new System.Drawing.Point(95, 31);
             this.txtnama.Name = "txtnama";
-            this.txtnama.Size = new System.Drawing.Size(210, 22);
+            this.txtnama.Size = new System.Drawing.Size(200, 22);
             this.txtnama.TabIndex = 5;
             // 
             // label1
@@ -137,7 +140,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 98);
+            this.label3.Location = new System.Drawing.Point(3, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 16);
             this.label3.TabIndex = 2;
@@ -146,7 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 49);
+            this.label2.Location = new System.Drawing.Point(3, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 1;
@@ -155,7 +158,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 148);
+            this.label4.Location = new System.Drawing.Point(3, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 3;
@@ -163,16 +166,37 @@
             // 
             // txtidsup
             // 
-            this.txtidsup.Location = new System.Drawing.Point(112, 3);
+            this.txtidsup.Location = new System.Drawing.Point(95, 3);
             this.txtidsup.Name = "txtidsup";
-            this.txtidsup.Size = new System.Drawing.Size(210, 22);
+            this.txtidsup.Size = new System.Drawing.Size(200, 22);
             this.txtidsup.TabIndex = 4;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(177, 63);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(368, 146);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(583, 88);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(79, 28);
+            this.btnOpen.TabIndex = 6;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
             // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -182,6 +206,7 @@
             this.Text = "Suplier";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +226,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtidsup;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnOpen;
     }
 }

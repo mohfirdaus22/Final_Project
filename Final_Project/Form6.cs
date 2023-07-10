@@ -19,7 +19,13 @@ namespace Final_Project
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            txtidsup.Enabled = true;
+            txtnama.Enabled = true;
+            txtnotlp.Enabled = true;
+            txtkotaasal.Enabled = true;
+            btnSave.Enabled = true;
+            btnOpen.Enabled = true;
+            btnClear.Enabled = true;
         }
     }
 }
