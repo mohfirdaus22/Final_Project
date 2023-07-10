@@ -45,7 +45,7 @@
             this.txtalamat = new System.Windows.Forms.TextBox();
             this.txtnotlp = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.TextBox();
-            this.txtidk = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,19 +204,20 @@
             this.txtemail.Size = new System.Drawing.Size(224, 22);
             this.txtemail.TabIndex = 11;
             // 
-            // txtidk
+            // comboBox1
             // 
-            this.txtidk.Location = new System.Drawing.Point(365, 325);
-            this.txtidk.Name = "txtidk";
-            this.txtidk.Size = new System.Drawing.Size(224, 22);
-            this.txtidk.TabIndex = 12;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(364, 325);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(224, 24);
+            this.comboBox1.TabIndex = 12;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtidk);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.txtnotlp);
             this.Controls.Add(this.txtalamat);
@@ -262,6 +263,6 @@
         private System.Windows.Forms.TextBox txtalamat;
         private System.Windows.Forms.TextBox txtnotlp;
         private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.TextBox txtidk;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

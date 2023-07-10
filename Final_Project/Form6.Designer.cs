@@ -207,6 +207,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "Form6";
             this.Text = "Suplier";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
