@@ -78,16 +78,16 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 12);
+            this.button4.Location = new System.Drawing.Point(26, 34);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 35);
+            this.button4.Size = new System.Drawing.Size(71, 46);
             this.button4.TabIndex = 3;
             this.button4.Text = "Back";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(682, 82);
+            this.button5.Location = new System.Drawing.Point(690, 34);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(77, 46);
             this.button5.TabIndex = 5;
@@ -233,6 +233,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Pembeli";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

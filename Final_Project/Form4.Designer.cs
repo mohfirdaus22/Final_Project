@@ -38,7 +38,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(207, 350);
+            this.button1.Location = new System.Drawing.Point(568, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 43);
             this.button1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(350, 350);
+            this.button2.Location = new System.Drawing.Point(568, 330);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(82, 43);
             this.button2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(494, 350);
+            this.button3.Location = new System.Drawing.Point(568, 395);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(82, 43);
             this.button3.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(652, 72);
+            this.button4.Location = new System.Drawing.Point(12, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 43);
             this.button4.TabIndex = 3;
@@ -75,11 +75,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(164, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(127, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(461, 188);
+            this.dataGridView1.Size = new System.Drawing.Size(540, 188);
             this.dataGridView1.TabIndex = 4;
             // 
             // Form4
