@@ -38,6 +38,17 @@ namespace Final_Project
 
         }
 
+        //buat datagrid
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT Id_kasir, Nama, Email, No_telp FROM dbo.Kasir";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
