@@ -21,6 +21,14 @@ namespace Final_Project
         {
             txtidp.Text = "";
             txtnama.Text = "";
+            txtnotlp.Text = "";
+            txtalamat.Text = "";
+            txtemail.Text = "";
+            txtidk.Text = "";
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button5.Enabled = false;
         }
 
         public Form2()
