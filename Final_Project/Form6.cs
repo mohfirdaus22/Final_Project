@@ -105,5 +105,10 @@ namespace Final_Project
             dataGridView();
             btnOpen.Enabled = false;
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
