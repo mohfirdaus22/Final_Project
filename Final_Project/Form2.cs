@@ -17,6 +17,12 @@ namespace Final_Project
         private string stringConnection = "data source=Jorengezzz\\THEPASHTER;" + "database=Restaurant_K1 ;User ID=sa;password=Salahtompo22";
         private SqlConnection koneksi;
 
+        private void refreshform()
+        {
+            txtidp.Text = "";
+            txtnama.Text = "";
+        }
+
         public Form2()
         {
             InitializeComponent();
