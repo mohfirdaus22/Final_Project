@@ -30,6 +30,19 @@ namespace Final_Project
 
         }
 
+        private void refreshform()
+        {
+            txtidko.Text = "";
+            txtnama.Text = "";
+            txtnotelp.Text = "";
+            txtalamat.Text = "";
+            btnAdd.Enabled = false;
+            btnClear.Enabled = false;
+            btnSave.Enabled = false;
+            btnOpen.Enabled = false;
+            
+        }
+
         //buat datagrid
         private void dataGridView()
         {
@@ -91,6 +104,11 @@ namespace Final_Project
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridView();
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
