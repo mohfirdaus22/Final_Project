@@ -99,5 +99,11 @@ namespace Final_Project
                 refreshform();
             }
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
+        }
     }
 }
