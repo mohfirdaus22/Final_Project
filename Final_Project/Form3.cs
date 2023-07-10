@@ -115,5 +115,12 @@ namespace Final_Project
                 refreshform();
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            {
+                refreshform();
+            }
+        }
     }
 }
