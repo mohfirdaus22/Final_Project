@@ -12,11 +12,13 @@ namespace Final_Project
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
         }
 
+        //Button Pembeli
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
@@ -24,6 +26,7 @@ namespace Final_Project
             this.Hide();
         }
 
+        //Button Kasir
         private void button2_Click(object sender, EventArgs e)
         {
             Form3 f3 = new Form3();
@@ -31,6 +34,7 @@ namespace Final_Project
             this.Hide();
         }
 
+        //Button Menu
         private void button3_Click(object sender, EventArgs e)
         {
             Form4 f4 = new Form4();
@@ -38,6 +42,7 @@ namespace Final_Project
             this.Hide();
         }
 
+        //Button Koki
         private void button4_Click(object sender, EventArgs e)
         {
             Form5 f5 = new Form5();
@@ -45,6 +50,7 @@ namespace Final_Project
             this.Hide();
         }
 
+        //Button Suplier
         private void button5_Click(object sender, EventArgs e)
         {
             Form6 f6 = new Form6();
