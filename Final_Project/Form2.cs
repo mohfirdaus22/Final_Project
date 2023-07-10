@@ -64,7 +64,13 @@ namespace Final_Project
         //Fungtion datagrid
         private void dataGridView()
         {
-           
+            koneksi.Open();
+            string query = "SELECT Id_pembeli, Nama, Alamat, No_telp, Email FROM dbo.Pembeli";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
         private void button2_Click(object sender, EventArgs e)
         {
