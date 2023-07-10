@@ -18,6 +18,7 @@ namespace Final_Project
         public Form5()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
             refreshform();
         }
 
@@ -28,13 +29,7 @@ namespace Final_Project
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            koneksi.Open();
-            string query = "SELECT Id_koki, Nama, Alamat, No_telp, FROM dbo.Koki";
-            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            koneksi.Close();
+            
         }
 
         private void refreshform()
@@ -54,7 +49,7 @@ namespace Final_Project
         private void dataGridView()
         {
             koneksi.Open();
-            string query = "SELECT Id_koki, Nama, Alamat, No_telp, FROM dbo.Koki";
+            string query = "SELECT Id_koki, Nama, Alamat, No_telp FROM dbo.Koki";
             SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -82,7 +77,7 @@ namespace Final_Project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string idkoki = txtnama.Text;
+            string idkoki = txtidko.Text;
             string nama = txtnama.Text;
             string alamat = txtalamat.Text;
             string notelp = txtnotelp.Text;
@@ -103,21 +98,24 @@ namespace Final_Project
             {
                 MessageBox.Show("Masukkan Alamat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            koneksi.Open();
-            string str = "INSERT INTO Koki (Id_koki, Nama, Alamat,No_telp) VALUES (@id_koki, @nama, @alamat, @notelp)";
-            SqlCommand cmd = new SqlCommand(str, koneksi);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add(new SqlParameter("@Id_koki", idkoki));
-            cmd.Parameters.Add(new SqlParameter("@Alamat",alamat));
-            cmd.Parameters.Add(new SqlParameter("@No_telp", notelp));
-            cmd.Parameters.Add(new SqlParameter("@Nama", nama));
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO Koki (Id_koki, Nama, Alamat,No_telp) VALUES (@id_koki, @nama, @alamat, @No_telp)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@Id_koki", idkoki));
+                cmd.Parameters.Add(new SqlParameter("@Alamat", alamat));
+                cmd.Parameters.Add(new SqlParameter("@No_telp", notelp));
+                cmd.Parameters.Add(new SqlParameter("@Nama", nama));
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-            koneksi.Close();
-            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dataGridView();
-            refreshform();
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
