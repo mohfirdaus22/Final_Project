@@ -60,5 +60,68 @@ namespace Final_Project
             txtemail.Enabled = true;
             txtidk.Enabled = true;
         }
+
+        //Fungtion datagrid
+        private void dataGridView()
+        {
+           
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string idpembeli = txtidp.Text;
+            string nama = txtnama.Text;
+            string notlp = txtnotlp.Text;
+            string alamat = txtalamat.Text;
+            string email = txtemail.Text;
+            string idkasir = txtidk.Text;
+
+            if (idpembeli== "")
+            {
+                MessageBox.Show("Masukkan Id Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (nama== "")
+            {
+                MessageBox.Show("Masukkan Nama", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (notlp == "")
+            {
+                MessageBox.Show("Masukkan No Telp", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (alamat == "")
+            {
+                MessageBox.Show("Masukkan Alamat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (email == "")
+            {
+                MessageBox.Show("Masukkan Email", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (idkasir == "")
+            {
+                MessageBox.Show("Masukkan Id Kasir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO Pembeli (Id_pembeli, Nama, Alamat, No_telp, Email) VALUES (@Id_pembeli, @Nama, @Alamat, @No_telp, @Email)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@Id_pembeli", idpembeli));
+                cmd.Parameters.Add(new SqlParameter("@Nama", nama));
+                cmd.Parameters.Add(new SqlParameter("@Alamat", alamat));
+                cmd.Parameters.Add(new SqlParameter("@No_telp", notlp));
+                cmd.Parameters.Add(new SqlParameter("@Email", email));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+
+
+            }
+
+
+
+        }
     }
 }
