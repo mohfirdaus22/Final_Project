@@ -29,5 +29,33 @@ namespace Final_Project
         {
 
         }
+
+        //buat datagrid
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT Id_koki, Nama, Alamat, No_telp, FROM dbo.Koki";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string idkoki = txtnama.Text;
+            string nama = txtnama.Text;
+            string alamat = txtalamat.Text;
+            string notelp = txtnotelp.Text;
+
+
+        }
     }
 }
