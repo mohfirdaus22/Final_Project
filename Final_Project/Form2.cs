@@ -36,5 +36,15 @@ namespace Final_Project
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtidp.Enabled = true;
+            txtnama.Enabled = true;
+            txtnotlp.Enabled = true;
+            txtalamat.Enabled = true;
+            txtemail.Enabled = true;
+            txtidk.Enabled = true;
+        }
     }
 }
