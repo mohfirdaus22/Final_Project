@@ -173,6 +173,7 @@
             this.txtidkas.Name = "txtidkas";
             this.txtidkas.Size = new System.Drawing.Size(294, 22);
             this.txtidkas.TabIndex = 4;
+            this.txtidkas.TextChanged += new System.EventHandler(this.txtidkas_TextChanged);
             // 
             // dataGridView1
             // 
@@ -208,6 +209,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "Form3";
             this.Text = "Kasir";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

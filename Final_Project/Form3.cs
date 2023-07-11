@@ -122,5 +122,15 @@ namespace Final_Project
                 refreshform();
             }
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtidkas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace Final_Project
             
         }
 
+        //nuat sndiri refresh form
         private void refreshform()
         {
             txtidko.Text = "";
@@ -57,12 +58,14 @@ namespace Final_Project
             koneksi.Close();
         }
 
+        //button open
         private void btnOpen_Click(object sender, EventArgs e)
         {
             dataGridView();
             btnOpen.Enabled = false;
         }
 
+        //button Add
         private void btnAdd_Click(object sender, EventArgs e)
         {
             txtidko.Enabled = true;
@@ -75,6 +78,7 @@ namespace Final_Project
            
         }
 
+        //button save
         private void btnSave_Click(object sender, EventArgs e)
         {
             string idkoki = txtidko.Text;
